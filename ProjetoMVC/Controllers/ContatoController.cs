@@ -26,7 +26,7 @@ namespace ProjetoMVC.Controllers
         }
 
         // GET: Contato/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Detalhes(int? id)
         {
             if (id == null)
             {
@@ -44,7 +44,7 @@ namespace ProjetoMVC.Controllers
         }
 
         // GET: Contato/Create
-        public IActionResult Create()
+        public IActionResult Criar()
         {
             return View();
         }
@@ -52,7 +52,7 @@ namespace ProjetoMVC.Controllers
         // POST: Contato/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,Telefone,Ativo")] Contato contato)
+        public async Task<IActionResult> Criar([Bind("Id,Nome,Telefone,Ativo")] Contato contato)
         {
             if (ModelState.IsValid)
             {
@@ -64,7 +64,7 @@ namespace ProjetoMVC.Controllers
         }
 
         // GET: Contato/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Editar(int? id)
         {
             if (id == null)
             {
@@ -83,7 +83,7 @@ namespace ProjetoMVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Telefone,Ativo")] Contato contato)
+        public async Task<IActionResult> Editar(int id, [Bind("Id,Nome,Telefone,Ativo")] Contato contato)
         {
             if (id != contato.Id)
             {
@@ -114,7 +114,7 @@ namespace ProjetoMVC.Controllers
         }
 
         // GET: Contato/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Deletar(int? id)
         {
             if (id == null)
             {
